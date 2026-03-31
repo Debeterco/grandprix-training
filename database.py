@@ -18,9 +18,9 @@ def init_db():
     Initialize the database creating the table 'orders' 
     if dont exist. Secure to call multiple times.
     """
-conn = get_connection()
-cursor = conn.cursor() # cursor() allow execute SQL commands
-cursor.execute('''
+    conn = get_connection()
+    cursor = conn.cursor() # cursor() allow execute SQL commands
+    cursor.execute('''
     CREATE TABLE IF NOT EXISTS orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     product TEXT NOT NULL,
@@ -30,6 +30,6 @@ cursor.execute('''
 )
 ''')
 
-conn.commit()   # commit() save alterations in the orders.db
-conn.close()    # close() free the connection (good practice)
-print("Database initialization succeeded.")
+    conn.commit()   # commit() save alterations in the orders.db
+    conn.close()    # close() free the connection (good practice)
+    print("Database initialization succeeded.")
