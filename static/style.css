@@ -93,4 +93,15 @@ button:hover {opacity: 0.88;}
 button:active {transform: scale(0.97)}
 #btn-signup {background: #00897B; color: white;}
 .btn-update {background: #E0F2F1; color: #00897B; font-size:0.85rem;}
-.btn-delete
+.btn-delete {background: #FFEBEE; color: #C62828; font-size: 0.8rem; padding: 4px 10px;}
+
+.message {
+    margin-top: 0.8rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.message.success {background: #E8F5E9; color: #2E7D32; border-left: 4px solid #2E7D32;}
+.message.error {background: #FFEBEE; color: #C62828; border-left: 4px solid #C62828;}
+.hidden {display: none;}
