@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Orders System</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Production Orders System</h1>
+            <span id="status-badge">Verifying...</span>
+        </div>
+        <link rel="stylesheet" href="style.css">
+    </header>
+
+    <main>
+        <section class="card" id="section-signup">
+            <h2>New Production Order</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="product">Product</label>
+                    <input type="text" id="product" placeholder="Ex: Motor Elétrico WEG W22">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" placeholder="Ex: 100" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="new_status">Initial Status</label>
+                    <select id="new_status">
+                        <option value="Pending">Pending</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            <button id="btn-signup" onclick="create_order()">Signup Order</button>
+            <div id="message" class="hidden-message"></div>
+        </section>
+
+        <section class="card" id="section-list">
+            <div class="header-list">
+                <h2>Registered Orders</h2>
+                <button class="btn-update" onclick="order_update()">Update List</button>
+            </div>
+
+            <div id="loading" class="hidden">Loading...</div>
+
+            <div class="container-table">
+                <table id="orders-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Created at</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table=body">
+                        <!-- Lines created by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <p id="no-data" class="hidden">No orders registered.</p>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
