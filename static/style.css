@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #1F3864, #00897B);
+    background: linear-gradient(135deg, #003a7c, #0075fc);
     color: white;
     padding: 1.2rem 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@ header h1 {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
 }
-#status-badge.online {background: #00897B; border-color: #00897B;}
+#status-badge.online {background: #003a7c; border-color: #003a7c;}
 #status-badge.offline {background: #B71C1C; border-color: #B71C1C;}
 
 main {
@@ -53,7 +53,7 @@ main {
 }
 .card h2 {
     font-size: 1.1rem;
-    color: #00897B;
+    color: #0075fc;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #E0F2F1;
@@ -78,7 +78,7 @@ input, select {
     transition: border-color 0.2s;
     outline: none;
 }
-input:focus, select:focus {border-color: #00897B}
+input:focus, select:focus {border-color: #0075fc}
 
 button {
     padding: 0.6rem 1.4rem;
@@ -91,8 +91,8 @@ button {
 }
 button:hover {opacity: 0.88;}
 button:active {transform: scale(0.97)}
-#btn-signup {background: #00897B; color: white;}
-.btn-update {background: #E0F2F1; color: #00897B; font-size:0.85rem;}
+#btn-signup {background: #0075fc; color: white;}
+.btn-update {background: #E0F2F1; color: #0075fc; font-size:0.85rem;}
 .btn-delete {background: #FFEBEE; color: #C62828; font-size: 0.8rem; padding: 4px 10px;}
 
 .message {
@@ -146,7 +146,7 @@ tr:hover td{background: #F5F5F5;}
 #loading {
     text-align: center;
     padding: 1rem;
-    color: #00897B;
+    color: #0075fc;
     font-weight: 600;
 }
 #no-data {text-align: center; padding: 2rem; color: #90A4AE;}
