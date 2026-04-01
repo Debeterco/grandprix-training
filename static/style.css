@@ -87,7 +87,7 @@ button {
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.2s, transform: 0.1s;
+    transition: opacity 0.2s, transform 0.1s;
 }
 button:hover {opacity: 0.88;}
 button:active {transform: scale(0.97)}
@@ -105,3 +105,12 @@ button:active {transform: scale(0.97)}
 .message.success {background: #E8F5E9; color: #2E7D32; border-left: 4px solid #2E7D32;}
 .message.error {background: #FFEBEE; color: #C62828; border-left: 4px solid #C62828;}
 .hidden {display: none;}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.container-table {overflow-x: auto}
+table {width: 100%; border-collapse: collapse; font-size: 0.9rem;}
