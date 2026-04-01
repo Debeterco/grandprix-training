@@ -114,3 +114,39 @@ button:active {transform: scale(0.97)}
 }
 .container-table {overflow-x: auto}
 table {width: 100%; border-collapse: collapse; font-size: 0.9rem;}
+th {
+    background: #263238;
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+td { padding: 10px 12px; border-bottom: 1px solid #ECEFF1;}
+tr:hover td{background: #F5F5F5;}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+.badge-pending {background: #FFF9C4; color: #F57F17;}
+.badge-inprogress {background: #E3F2FD; color: #0D47A1;}
+.badge-completed {background: #E8F5E9; color: #2E7D32;}
+
+.select-status {
+    padding: 3px 6px;
+    border: 1px solid #CFD8DC;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+#loading {
+    text-align: center;
+    padding: 1rem;
+    color: #00897B;
+    font-weight: 600;
+}
+#no-data {text-align: center; padding: 2rem; color: #90A4AE;}
