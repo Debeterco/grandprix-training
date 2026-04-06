@@ -60,7 +60,7 @@ def search_order(order_id): # order_id is int
     conn = get_connection()
     cursor = conn.cursor()
     
-    # The '?' is replaced by the valeu of order_id in a secure way
+    # The '?' is replaced by the value of order_id in a secure way
     cursor.execute('SELECT * FROM orders WHERE id = ?', (order_id,))
     order = cursor.fetchone() # fetchone() return a unique register or None
     conn.close()

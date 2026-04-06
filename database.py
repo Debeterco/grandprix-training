@@ -5,7 +5,7 @@ def get_connection():
     """
     Create and return a connection with the database SQLite.
     The property row_factory allow access by the columns names
-    (ex: ordem['produto']) instead of index (ex: ordem[1]).
+    (ex: order['product']) instead of index (ex: order[1]).
     Return:
     sqlite3.Connection: connection object to the database.
     """
