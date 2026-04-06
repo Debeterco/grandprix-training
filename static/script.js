@@ -1,4 +1,10 @@
 const API_URL = 'http://localhost:5000';
+const API_KEY = 'senai-cybersystems-2026-secure-key';
+
+const authenticatedHeaders = {
+    'Content-Type': 'application/json',
+    'X-API-Key': API_KEY
+}
 
 async function verifyStatus() {
     const badge = document.getElementById('status-badge');
@@ -40,7 +46,7 @@ async function loadOrders() {
             <td>${order.product}</td>
             <td>${order.quantity}</td>
             <td>${renderizeBadge(order.status)}</td>
-            <td>${order.createdAt}</td>
+            <td>${order.created_at}</td>
             <td>
                 <select class="select-status" onchange="updateStatus(${order.id}, this.value)">
                     <option value="Pending" ${order.status === 'Pending' ? 'selected' : ''}>
@@ -102,7 +108,7 @@ async function createOrder() {
     try {
         const response = await fetch(`${API_URL}/orders`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: authenticatedHeaders,
             body: JSON.stringify({
                 product: product,
                 quantity: Number(quantity),
@@ -140,7 +146,7 @@ async function updateStatus(id, newStatus) {
     try {
         const response = await fetch(`${API_URL}/orders/${id}`, { 
             method: 'PUT',
-            headers: {'Content-Type': 'application/json'},
+            headers: authenticatedHeaders,
             body: JSON.stringify({status: newStatus})
         });
 
@@ -171,7 +177,8 @@ async function deleteOrder(id) {
 
     try {
         const response = await fetch(`${API_URL}/orders/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {'X-API-Key': API_KEY}
         });
 
         const data = await response.json();
